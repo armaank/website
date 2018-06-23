@@ -3,14 +3,14 @@ personal website
 
 TODO:
 
--remake favicon
+- remake favicon
 
--add linkedin
+- add linkedin
 
--add resume
+- add resume
 
--improve tagline at bottom
+- improve tagline at bottom
 
 - add email
 
--actually buy a domain lol
+- actually buy a domain lol
