@@ -39,6 +39,11 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-hyphens: auto;
   hyphens: auto; }
 
+p {
+  font-size: 1em;
+  font-weight: 100;
+  font-family: Verdana, Geneva, sans-serif; }
+
 h1 {
   font-size: 2.35em; }
 
