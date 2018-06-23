@@ -9,8 +9,6 @@ TODO:
 
 - add resume
 
-- improve tagline at bottom
-
-- add email
+- update text css
 
 - actually buy a domain lol
