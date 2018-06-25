@@ -1,1 +1,0 @@
-make it so that there is one tab for resume (with option to download it), add a tab for side projects/code (github?), http://stevelosh.com, 
