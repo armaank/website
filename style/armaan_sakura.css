@@ -1,9 +1,8 @@
-/* css for personal website
- * based on Sakura.css
- * project: https://github.com/oxalorg/sakura
- * written by armaan kohli
-*/	
-
+/* Sakura.css v1.0.0
+ * ================
+ * Minimal css theme.
+ * Project: https://github.com/oxalorg/sakura
+ */
 /* Body */
 html {
   font-size: 62.5%;
@@ -14,9 +13,10 @@ body {
   line-height: 1.618;
   max-width: 38em;
   margin: auto;
-  color: #c9c9c9;
-  background-color: #222222;
+  color: #4a4a4a;
+  background-color: #d0d0d0;
   padding: 13px; }
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   font-family: Verdana, Geneva, sans-serif;
@@ -30,11 +30,6 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-hyphens: auto;
   hyphens: auto; }
 
-p {
-  font-size: 1em;
-  font-weight: 100;
-  font-family: Verdana, Geneva, sans-serif; }
-
 h1 {
   font-size: 2.35em; }
 
@@ -43,7 +38,12 @@ h2 {
 
 h3 {
   font-size: 1.75em; }
-
+p {
+  font-size:1.00em;
+  font-family: Verdana, Geneva, sans-serif;
+  color: #4a4a5a;
+  font-weight:100;
+}
 h4 {
   font-size: 1.5em; }
 
@@ -52,6 +52,10 @@ h5 {
 
 h6 {
   font-size: 1em; }
+
+small, sub, sup {
+  font-size: 75%; }
+
 hr {
   border-color: #338618; }
 
@@ -74,8 +78,5 @@ blockquote {
   padding-left: 1em;
   border-left: 3px solid #338618; }
 
-
 img {
   max-width: 100%; }
-
-
