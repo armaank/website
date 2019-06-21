@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <meta name="generator" content="Hugo 0.52" />
+
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>VNES</title>
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <link href="/index.xml" rel="alternate" type="application/rss+xml" title="VNES" />
+
+</head>
+<body>
+
+<div class="sidebar sidebar-default">
+    <div class="navigation">
+        <div> ECE311 - Hardware Design</div>
+        <h1 class="site-title"><a href="">VNES</a></h1>
+
+
+        <nav class="internal">
+            <ul>
+    
+        
+            
+    <li>
+        <a href="#introduction">Introduction</a>
+    </li>
+
+
+
+        
+            
+    <li>
+        <a href="#updates">Updates</a>
+    </li>
+
+
+
+        
+            
+    <li>
+        <a href="#presentation">Presentations</a>
+    </li>
+
+
+
+        
+            
+    <li>
+        <a href="#code">VGA Code Snippet</a>
+    </li>
+
+
+
+        
+    
+</ul>
+
+        </nav>
+
+        <nav class="external">
+            <div class="external-title"></div>
+            
+            <ul id="shortcuts">
+                
+                <li>
+                    <a href="https://github.com/alirahman17/VNES" target="_blank" rel="noopener">VNES on Github</a>
+                </li>
+                
+            </ul>
+            
+        </nav>
+    </div>
+
+</div>
+
+<div class="content">
+    
+        
+            
+    <section class="page" id="introduction">
+    <h1>
+        <a href="#introduction">Introduction</a>
+    </h1>
+    <div class="content">
+        <p>Welcome. This is the main project page for a Verilog based NES console.</p>
+
+<p>We are Ali, Armaan and Kevin, juniors at The Cooper Union studying electrical engineering. On this page you can see project updates and progress reports as we continue to work on our design as part of our final project in ECE311 Hardware Design.</p>
+
+<div class="block note">
+    <p>This website is a work in progress and will continue to update as we work on the project.</p>
+
+</div>
+
+
+    </div>
+</section>
+
+
+
+
+        
+            
+    <section class="page" id="updates">
+    <h1>
+        <a href="#updates">Updates</a>
+    </h1>
+    <div class="content">
+        
+
+<h2 id="week-of-the-19th-of-november">Week of the 19th of November</h2>
+
+<blockquote>
+<p>Previous to this week, we wrote up a large block diagram of the system and did some preliminary research on the NES itself and what would be required to realize the console in Verilog. Ali also set up the github.</p>
+
+<p>This week, we have been working on making some of the core functionality of the device. Kevin started working on the drivers and associated modules for the VGA display, Armaan worked on making modules for the controller inputs, and Ali started work on the CPU. We also worked on setting up this very website!</p>
+
+<p>We also came up with a lesson plan and began work on our presentation for our lecture on the following Wednesday.</p>
+</blockquote>
+
+<h2 id="week-of-the-26th-of-november">Week of the 26th of November</h2>
+
+<blockquote>
+<p>This week, we gave a presentation to the class on our project. The presentation we used is below.</p>
+
+<p>We continued working on various modules. Ali finished up the CPU, Kevin finished up large portions of the PPU, and Armaan started writing modules for the MMU</p>
+</blockquote>
+
+<h2 id="week-of-the-3rd-of-december">Week of the 3rd of December</h2>
+
+<blockquote>
+<p>We continued working on many modules. Started to test and debug, which is a very difficult process because it is large system with many parts, any of which could go wrong. We wrote the constraints file, generated the bistream and successfully wrote the project to the board. However, at this point, we have yet to test if the project is working.</p>
+</blockquote>
+
+<h2 id="week-of-the-10th-of-december">Week of the 10th of December</h2>
+
+<blockquote>
+<p>Currently working on debugging the C code we wrote to upload the game file to the board. We are also attempting to find a way to use a USB controller, although we did make a backup controller that should work no matter what.</p>
+</blockquote>
+
+<h2 id="week-of-the-17th-of-december">Week of the 17th of December</h2>
+
+<blockquote>
+<p>We gave our final presentation on Monday the 17th, see below for the slides we used. Some future work would include designing a nice case for the FPGA to sit in so it actually looks like a NES. Also, we would need to hevily modify the CPU to add support for audio, as well as build an analog audio preamp and power amplifier to drive a speaker. Also, we have no capability to save the game, so after one reloads the FPGA with a different game, the previous game files are lost. However, these are minor details, and at the end of the day, we have a completely functioning NES!!</p>
+</blockquote>
+
+    </div>
+</section>
+
+
+
+
+        
+            
+    <section class="page" id="presentation">
+    <h1>
+        <a href="#presentation">Presentations</a>
+    </h1>
+    <div class="content">
+        <blockquote>
+<p><a href="https://armaank.com/ECE311.pptx"> Here is a copy of the presentation we used in our lecture about writing VGA drivers for an FPGA </a></p>
+
+<p><a href="https://armaank.com/ECE311_Final.pptx"> Here is a copy of the slides we used in our final presentation to the class </a></p>
+</blockquote>
+
+    </div>
+</section>
+
+
+
+
+        
+            
+    <section class="page" id="code">
+    <h1>
+        <a href="#code">VGA Code Snippet</a>
+    </h1>
+    <div class="content">
+        <div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Verilog" data-lang="Verilog"><span style="color:#00a8c8">module</span> <span style="color:#111">vga</span><span style="color:#111">(</span><span style="color:#00a8c8">input</span> <span style="color:#00a8c8">wire</span> <span style="color:#111">clk</span><span style="color:#111">,</span> <span style="color:#00a8c8">input</span> <span style="color:#00a8c8">wire</span> <span style="color:#111">i_pix_stb</span><span style="color:#111">,</span> <span style="color:#00a8c8">input</span> <span style="color:#00a8c8">wire</span> <span style="color:#111">i_rst</span><span style="color:#111">,</span>
+            <span style="color:#00a8c8">output</span> <span style="color:#00a8c8">wire</span> <span style="color:#111">horizSync</span><span style="color:#111">,</span> <span style="color:#00a8c8">output</span> <span style="color:#00a8c8">wire</span> <span style="color:#111">vertSync</span><span style="color:#111">,</span> <span style="color:#00a8c8">output</span> <span style="color:#00a8c8">wire</span> <span style="color:#111">o_blanking</span><span style="color:#111">,</span>
+            <span style="color:#00a8c8">output</span> <span style="color:#00a8c8">wire</span> <span style="color:#111">o_active</span><span style="color:#111">,</span> <span style="color:#00a8c8">output</span> <span style="color:#00a8c8">wire</span> <span style="color:#111">o_screenend</span><span style="color:#111">,</span> <span style="color:#00a8c8">output</span> <span style="color:#00a8c8">wire</span> <span style="color:#111">o_animate</span><span style="color:#111">,</span>
+            <span style="color:#00a8c8">output</span> <span style="color:#00a8c8">wire</span> <span style="color:#111">[</span><span style="color:#ae81ff">9</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span><span style="color:#111">]</span> <span style="color:#111">o_x</span><span style="color:#111">,</span> <span style="color:#00a8c8">output</span> <span style="color:#00a8c8">wire</span> <span style="color:#111">[</span><span style="color:#ae81ff">8</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span><span style="color:#111">]</span> <span style="color:#111">o_y</span><span style="color:#111">);</span>
+
+    <span style="color:#00a8c8">localparam</span> <span style="color:#111">HS_STA</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">16</span><span style="color:#111">;</span>
+    <span style="color:#00a8c8">localparam</span> <span style="color:#111">HS_END</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">16</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">96</span><span style="color:#111">;</span>
+    <span style="color:#00a8c8">localparam</span> <span style="color:#111">HA_STA</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">16</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">96</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">48</span><span style="color:#111">;</span>
+    <span style="color:#00a8c8">localparam</span> <span style="color:#111">VS_STA</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">480</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">11</span><span style="color:#111">;</span>
+    <span style="color:#00a8c8">localparam</span> <span style="color:#111">VS_END</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">480</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">11</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span><span style="color:#111">;</span>
+    <span style="color:#00a8c8">localparam</span> <span style="color:#111">VA_END</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">480</span><span style="color:#111">;</span>
+    <span style="color:#00a8c8">localparam</span> <span style="color:#111">LINE</span>   <span style="color:#f92672">=</span> <span style="color:#ae81ff">800</span><span style="color:#111">;</span>
+    <span style="color:#00a8c8">localparam</span> <span style="color:#111">SCREEN</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">524</span><span style="color:#111">;</span>
+
+    <span style="color:#00a8c8">reg</span> <span style="color:#111">[</span><span style="color:#ae81ff">9</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span><span style="color:#111">]</span> <span style="color:#111">HorizCount</span><span style="color:#111">;</span>
+    <span style="color:#00a8c8">reg</span> <span style="color:#111">[</span><span style="color:#ae81ff">9</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span><span style="color:#111">]</span> <span style="color:#111">vertCount</span><span style="color:#111">;</span>
+
+    <span style="color:#00a8c8">assign</span> <span style="color:#111">horizSync</span> <span style="color:#f92672">=</span> <span style="color:#f92672">~</span><span style="color:#111">((</span><span style="color:#111">HorizCount</span> <span style="color:#f92672">&gt;=</span> <span style="color:#111">HS_STA</span><span style="color:#111">)</span> <span style="color:#f92672">&amp;</span> <span style="color:#111">(</span><span style="color:#111">HorizCount</span> <span style="color:#f92672">&lt;</span> <span style="color:#111">HS_END</span><span style="color:#111">));</span>
+    <span style="color:#00a8c8">assign</span> <span style="color:#111">vertSync</span> <span style="color:#f92672">=</span> <span style="color:#f92672">~</span><span style="color:#111">((</span><span style="color:#111">vertCount</span> <span style="color:#f92672">&gt;=</span> <span style="color:#111">VS_STA</span><span style="color:#111">)</span> <span style="color:#f92672">&amp;</span> <span style="color:#111">(</span><span style="color:#111">vertCount</span> <span style="color:#f92672">&lt;</span> <span style="color:#111">VS_END</span><span style="color:#111">));</span>
+    <span style="color:#00a8c8">assign</span> <span style="color:#111">o_x</span> <span style="color:#f92672">=</span> <span style="color:#111">(</span><span style="color:#111">HorizCount</span> <span style="color:#f92672">&lt;</span> <span style="color:#111">HA_STA</span><span style="color:#111">)</span> <span style="color:#f92672">?</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">:</span> <span style="color:#111">(</span><span style="color:#111">HorizCount</span> <span style="color:#f92672">-</span> <span style="color:#111">HA_STA</span><span style="color:#111">);</span>
+    <span style="color:#00a8c8">assign</span> <span style="color:#111">o_y</span> <span style="color:#f92672">=</span> <span style="color:#111">(</span><span style="color:#111">vertCount</span> <span style="color:#f92672">&gt;=</span> <span style="color:#111">VA_END</span><span style="color:#111">)</span> <span style="color:#f92672">?</span> <span style="color:#111">(</span><span style="color:#111">VA_END</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span><span style="color:#111">)</span> <span style="color:#f92672">:</span> <span style="color:#111">(</span><span style="color:#111">vertCount</span><span style="color:#111">);</span>
+    <span style="color:#00a8c8">assign</span> <span style="color:#111">o_blanking</span> <span style="color:#f92672">=</span> <span style="color:#111">((</span><span style="color:#111">HorizCount</span> <span style="color:#f92672">&lt;</span> <span style="color:#111">HA_STA</span><span style="color:#111">)</span> <span style="color:#f92672">|</span> <span style="color:#111">(</span><span style="color:#111">vertCount</span> <span style="color:#f92672">&gt;</span> <span style="color:#111">VA_END</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span><span style="color:#111">));</span>
+    <span style="color:#00a8c8">assign</span> <span style="color:#111">o_active</span> <span style="color:#f92672">=</span> <span style="color:#f92672">~</span><span style="color:#111">((</span><span style="color:#111">HorizCount</span> <span style="color:#f92672">&lt;</span> <span style="color:#111">HA_STA</span><span style="color:#111">)</span> <span style="color:#f92672">|</span> <span style="color:#111">(</span><span style="color:#111">vertCount</span> <span style="color:#f92672">&gt;</span> <span style="color:#111">VA_END</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span><span style="color:#111">));</span>
+    <span style="color:#00a8c8">assign</span> <span style="color:#111">o_screenend</span> <span style="color:#f92672">=</span> <span style="color:#111">((</span><span style="color:#111">vertCount</span> <span style="color:#f92672">==</span> <span style="color:#111">SCREEN</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span><span style="color:#111">)</span> <span style="color:#f92672">&amp;</span> <span style="color:#111">(</span><span style="color:#111">HorizCount</span> <span style="color:#f92672">==</span> <span style="color:#111">LINE</span><span style="color:#111">));</span>
+    <span style="color:#00a8c8">assign</span> <span style="color:#111">o_animate</span> <span style="color:#f92672">=</span> <span style="color:#111">((</span><span style="color:#111">vertCount</span> <span style="color:#f92672">==</span> <span style="color:#111">VA_END</span> <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span><span style="color:#111">)</span> <span style="color:#f92672">&amp;</span> <span style="color:#111">(</span><span style="color:#111">HorizCount</span> <span style="color:#f92672">==</span> <span style="color:#111">LINE</span><span style="color:#111">));</span>
+
+    <span style="color:#00a8c8">always</span> <span style="color:#111">@</span> <span style="color:#111">(</span><span style="color:#00a8c8">posedge</span> <span style="color:#111">clk</span><span style="color:#111">)</span>
+    <span style="color:#00a8c8">begin</span>
+        <span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#111">i_rst</span><span style="color:#111">)</span>
+        <span style="color:#00a8c8">begin</span>
+            <span style="color:#111">HorizCount</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span><span style="color:#111">;</span>
+            <span style="color:#111">vertCount</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span><span style="color:#111">;</span>
+        <span style="color:#00a8c8">end</span>
+        <span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#111">i_pix_stb</span><span style="color:#111">)</span>
+        <span style="color:#00a8c8">begin</span>
+            <span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#111">HorizCount</span> <span style="color:#f92672">==</span> <span style="color:#111">LINE</span><span style="color:#111">)</span>
+            <span style="color:#00a8c8">begin</span>
+                <span style="color:#111">HorizCount</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span><span style="color:#111">;</span>
+                <span style="color:#111">vertCount</span> <span style="color:#f92672">&lt;=</span> <span style="color:#111">vertCount</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#111">;</span>
+            <span style="color:#00a8c8">end</span>
+            <span style="color:#00a8c8">else</span>
+                <span style="color:#111">HorizCount</span> <span style="color:#f92672">&lt;=</span> <span style="color:#111">HorizCount</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span><span style="color:#111">;</span>
+            <span style="color:#00a8c8">if</span> <span style="color:#111">(</span><span style="color:#111">vertCount</span> <span style="color:#f92672">==</span> <span style="color:#111">SCREEN</span><span style="color:#111">)</span>
+                <span style="color:#111">vertCount</span> <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">0</span><span style="color:#111">;</span>
+        <span style="color:#00a8c8">end</span>
+    <span style="color:#00a8c8">end</span>
+<span style="color:#00a8c8">endmodule</span>
+</code></pre></div>
+    </div>
+</section>
+
+
+
+
+        
+    
+</div>
+</body>
+</html>
+
